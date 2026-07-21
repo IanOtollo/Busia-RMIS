@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #FFFFFF;
+  --color-foreground: #14181D;
+
+  --color-card: #FFFFFF;
+  --color-card-foreground: #14181D;
+
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #14181D;
+
+  --color-primary: #1E7A46;
+  --color-primary-foreground: #FFFFFF;
+
+  --color-secondary: #F7F8FA;
+  --color-secondary-foreground: #14467B;
+
+  --color-muted: #F7F8FA;
+  --color-muted-foreground: #5B6470;
+
+  --color-accent: #14467B;
+  --color-accent-foreground: #FFFFFF;
+
+  --color-destructive: #B42318;
+  --color-destructive-foreground: #FFFFFF;
+
+  --color-border: #E5E7EB;
+  --color-input: #E5E7EB;
+  --color-ring: #1E7A46;
+
+  --radius-xl: 12px;
+  --radius-lg: 8px;
+  --radius-md: 6px;
+  --radius-sm: 4px;
+
+  --font-sans: var(--font-jost);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans text-[15px] leading-[1.6];
+    font-feature-settings: "tnum" 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight text-foreground;
+  }
+  h1 { @apply font-semibold; }
+}
+
+@layer components {
+  .card-formal {
+    @apply bg-card text-card-foreground rounded-xl border shadow-sm;
+  }
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg px-4 py-2 font-medium transition-colors shadow-sm;
+  }
+}
