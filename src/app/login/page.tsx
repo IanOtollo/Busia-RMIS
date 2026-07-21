@@ -17,11 +17,11 @@ export default function LoginPage() {
       </div>
 
       {/* Auth Side */}
-      <div className="flex w-full flex-col justify-center px-8 sm:px-12 lg:w-1/2 lg:px-24 xl:px-32 relative">
-        <div className="mx-auto w-full max-w-md">
+      <div className="flex w-full flex-1 flex-col px-8 py-12 sm:px-12 lg:w-1/2 lg:px-24 xl:px-32">
+        <div className="flex-1 flex flex-col justify-center mx-auto w-full max-w-md">
           {/* Header */}
           <div className="mb-10 text-center flex flex-col items-center">
-            <div className="relative mb-6 h-20 w-20">
+            <div className="relative mb-6 h-32 w-32">
               {/* Logo from public/logo.png */}
               <Image src="/logo.png" alt="Busia County Logo" fill className="object-contain" />
             </div>
@@ -84,13 +84,13 @@ export default function LoginPage() {
               Sign In
             </button>
           </form>
+        </div>
 
-          {/* Footer */}
-          <div className="absolute bottom-8 left-0 right-0 text-center">
-            <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} County Government of Busia. All rights reserved.
-            </p>
-          </div>
+        {/* Footer */}
+        <div className="mt-auto pt-8 text-center">
+          <p className="text-sm text-muted-foreground">
+            &copy; {new Date().getFullYear()} County Government of Busia. All rights reserved.
+          </p>
         </div>
       </div>
     </div>
